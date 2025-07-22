@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact - Makaveli Record Studio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'BungeeShade';
+      src: url('fonts/BungeeShade-Regular.ttf');
+    }
+
+    @font-face {
+      font-family: 'Amarante';
+      src: url('fonts/Amarante-Regular.ttf');
+    }
+
+    body {
+      background: url('images/contactbg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Amarante', sans-serif;
+      color: white;
+    }
+
+    .form-container {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      margin-top: 60px;
+      border-radius: 20px;
+      max-width: 600px;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    input, textarea {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid #fff;
+      color: white;
+    }
+
+    h2 {
+      font-family: 'BungeeShade', cursive;
+      margin-bottom: 30px;
+    }
+
+    .btn-send {
+      background-color: #c90000;
+      border: none;
+    }
+
+    .btn-send:hover {
+      background-color: #ff0000;
+    }
+  </style>
+</head>
+<body>
+  <div class="container d-flex justify-content-center">
+    <div class="form-container text-center">
+      <h2>Contacte-nous</h2>
+      <form onsubmit="envoyerWhatsApp(); return false;">
+        <div class="mb-3">
+          <input type="text" id="nom" class="form-control" placeholder="Votre nom" required>
+        </div>
+        <div class="mb-3">
+          <textarea id="message" class="form-control" rows="5" placeholder="Comment pouvons-nous vous aider en services ou autres ?" required onfocus="clearPlaceholder(this)"></textarea>
+        </div>
+        <button type="submit" class="btn btn-send text-white">Envoyer sur WhatsApp</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function clearPlaceholder(el) {
+      if (el.placeholder === "Comment pouvons-nous vous aider en services ou autres ?") {
+        el.placeholder = "";
+      }
+    }
+
+    function envoyerWhatsApp() {
+      const nom = document.getElementById("nom").value.trim();
+      const message = document.getElementById("message").value.trim();
+      if (!nom || !message) {
+        alert("Veuillez remplir tous les champs.");

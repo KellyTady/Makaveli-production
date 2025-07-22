@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Freestyle Zone - Makaveli Record Studio</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Google Fonts (remplace les polices locales) -->
+  <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Bungee+Shade&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Amarante', cursive;
+      background: url('images/freestyle-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      min-height: 100vh;
+    }
+
+    h1, h2 {
+      font-family: 'Bungee Shade', cursive;
+    }
+
+    .bg-glass {
+      background: rgba(0, 0, 0, 0.6); /* arrière-plan sombre translucide */
+      border-radius: 20px;
+      padding: 30px;
+    }
+
+    .form-label {
+      color: white;
+    }
+
+    .navbar-brand, .nav-link {
+      font-family: 'Bungee Shade', cursive;
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+       <li class="nav-item">
+          <a class="nav-link" href="index.html">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="services.html">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="production.html">Production</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="realisations.html">Réalisations</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+ <li class="nav-item">
+          <a class="nav-link" href="freestyle.html">Contact</a>
+        </li>
+  <section class="container my-5">
+    <div class="bg-glass text-white">
+      <h1 class="text-center mb-4">Freestyle Zone</h1>
+      <p class="text-center">Bienvenue dans l'arène ! Ici, les talents s'expriment librement. Découvrez nos sessions freestyle et postulez pour montrer ce que vous valez !</p>
+
+      <div class="row mt-4">
+        <div class="col-md-6 mb-3">
+          <img src="images/freestyle1.jpg" class="img-fluid rounded" alt="Freestyle image 1">
+        </div>
+        <div class="col-md-6 mb-3">
+          <img src="images/freestyle2.jpg" class="img-fluid rounded" alt="Freestyle image 2">
+        </div>
+      </div>
+
+      <hr class="my-5">
+      <h2 class="text-center">Postuler</h2>
+      <form class="row g-3" action="#" onsubmit="handleSubmit(event)">
+        <div class="col-md-6">
+          <label for="nom" class="form-label">Nom complet</label>
+          <input type="text" class="form-control" id="nom" required>
+        </div>
+        <div class="col-md-6">
+          <label for="numero" class="form-label">Numéro de téléphone</label>
+          <input type="tel" class="form-control" id="numero" required>
+        </div>
+        <div class="col-12">
+          <label for="youtube" class="form-label">Lien YouTube d'une chanson</label>
+          <input type="url" class="form-control" id="youtube" required>
+        </div>
+        <div class="col-md-6">
+          <label for="photo1" class="form-label">Photo professionnelle 1</label>
+          <input type="file" class="form-control" id="photo1" accept="image/*" required>
+        </div>
+        <div class="col-md-6">
+          <label for="photo2" class="form-label">Photo professionnelle 2</label>
+          <input type="file" class="form-control" id="photo2" accept="image/*" required>
+        </div>
+        <div class="col-12 text-center">
+          <button type="submit" class="btn btn-primary mt-3">Envoyer ma candidature</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- SCRIPTS -->
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      alert("Votre candidature a été reçue. Vos résultats seront fournis sur WhatsApp.");
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
